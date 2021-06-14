@@ -1,7 +1,14 @@
-$rem-baseline: 16;
+/* COLORS */
+:root {
+	--button-color: #E89F71;
+	--product-bg: #F4F5F7;
+	--discount-color: #E97171;
+	--new-color: #2EC1AC;
+	--beautiful-bg: #FCF8F3;
+}
 
-$home-bgcolor: #ffc0cb;
-
-// :root {
-// 	--home-color: #ffc0cb;
-// }
+/* FONTS */
+:root {
+	--font-bold: "Gilroy-ExtraBold", serif;
+	--font-light: "Gilroy-Light", serif;
+}

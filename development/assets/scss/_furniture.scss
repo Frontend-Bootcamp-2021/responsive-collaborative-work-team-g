@@ -1,0 +1,27 @@
+.furniture {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 1440px;
+
+	flex &__column {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__img {
+		margin: 8px;
+		object-fit: cover;
+	}
+
+	&__top {
+		display: flex;
+		align-items: flex-end;
+	}
+
+	&__bottom {
+		display: flex;
+		align-items: flex-start;
+	}
+}

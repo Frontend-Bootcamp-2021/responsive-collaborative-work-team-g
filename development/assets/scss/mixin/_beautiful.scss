@@ -1,0 +1,32 @@
+$beautiful-bg: #fcf8f3;
+$button-color: #E89F71;
+
+.room {
+  display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background-color: $beautiful-bg;
+  &__button{
+    	background-color: $button-color;
+      color:white;
+      width: 176px;
+      height: 48px;
+      border:0px;
+    
+  }
+  &__image{
+  
+    width: 100px;
+    height: 100px;
+  }
+  &__imgto{
+  
+    width: 100px;
+    height: 100px;
+  }
+  
+  
+
+
+
+}

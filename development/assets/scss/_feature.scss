@@ -1,1 +1,53 @@
+.feature{
+	display: flex;
+	flex-direction:row;
+	justify-content:space-around;
+
+	&__item{
+		display: flex;
+		flex-direction: row;
+		justify-content:center;
+		align-items: center;
+	}
+
+	&__content{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		line-height: 26px;
+	}
+	&__title{
+		margin: 0;
+		font-size: 18px;
+		color: #3A3A3A;
+	}
+	&__text{
+		margin: 0;
+		font-size: 16px;
+		color: #898989;
+		$font-light: "Gilroy-Light"
+	}
+	&__icon-box{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		width: 85px;
+		height: 85px;
+	
+	}
+		
+	&__icon-side{
+		width: 35px;
+		height: 40px;
+		
+	}
+
+	&__icon-center{
+	width: 40px;
+	height: 38px;
+	}
+}
+
+
 

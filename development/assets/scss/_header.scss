@@ -1,4 +1,243 @@
 .header {
-	height: 774px;
-	background-color: $beautiful-bg;
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+
+	// navigation section
+
+	&__nav {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	background-color: $nav-bg;
+	padding: 40px 0 40px 0;
+	color: $header-text-color;
+	height: 121px;
+	}
+
+	//logo styles
+
+	&__logo {
+		margin-left: 100px;
+		font-size: 24px;
+		font-family: $font-bold;
+		margin-right: 41px;
+		a {
+			text-decoration: none;
+			color: inherit;
+		}
+	}
+
+	//navigation links 
+
+	&__links-wrapper{
+		display: flex;
+		flex-direction: row;
+		a {
+			margin-right: 41px;
+			text-decoration: none;
+			color: inherit;
+			font-size: 16px;
+			}
+	}
+
+// navigation input searchbox
+	&__search-box {
+		display: flex;
+		flex-direction: row;
+		width: 473px;
+		height: 45px;
+		background-color: #ffff;
+		margin-right: 143.4px;
+
+		input {
+			width: 100%;
+			height: 100%;
+			border: none;
+			outline: none;
+			font-size: 14px;
+			font-family: $font-light;
+		}
+		img {
+			display: block;
+			padding: 15.333px;
+		}
+	}
+
+// navigation user icons
+
+	&__icons-box {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		height: 40px;
+	}
+	&__icon{
+		margin-right: 30px;
+	}
+
+// slider controller btns
+
+	&__slider-controller {
+		width: 100%;
+		padding: 40px 0 40px 0;
+		background-color: $nav-bg;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		align-items: center;
+		transition: .3s;
+		height: 100px;
+
+		.radio-lable {
+			display: block;
+			position: relative;
+			padding-left: 35px;
+			cursor: pointer;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+			input {
+				position: absolute;
+				opacity: 0;
+				cursor: pointer;
+				&:checked {
+					~ {
+						.checkmark {
+							border: 2px solid $button-color;
+							&:after {
+								display: block;
+								background-color: $button-color;
+							}
+						}
+					}
+				}
+			}
+			.checkmark {
+				&:after {
+					top: 50%;
+					left: 50%;
+					transform: translate(-50% , -50%);
+					width: 11px;
+					height: 11px;
+					border-radius: 50%;
+					background: $radio-bg;
+				}
+			}
+		}
+		.checkmark {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 27px;
+			width: 27px;
+			border-radius: 50%;
+			&:after {
+				content: "";
+				position: absolute;
+			}
+		}
+
+		.arrow {
+			margin-right: 100px;
+			margin-left: 415px;
+			span {
+			background: $slider-arrow-bg;
+			border-radius: 50%;
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			width: 48px;
+			height: 48px;
+			cursor: pointer;
+			font-size: 25px;
+			color: $button-color;
+		
+			}
+			:nth-child(1) {
+				transform: rotate(180deg);
+			}
+		}	
+		span:hover {
+			background: $button-color;
+			color: #ffff;
+		}
+	}
+
+// header hero content 
+	&__content {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		background: url(../images/header-bg.jpg);
+		height: 553px;
+	}
+
+// header hero content right section
+	&__content-right {
+		width: 494px;
+		height: 553px;
+		margin-left: 100px;
+		background: rgba(255, 255, 255, 0.72);
+		backdrop-filter: blur(20px);
+		transform: translateY(-80px);
+		padding: 60px;
+		h1{
+			font-size: 56px;
+			font-family: $font-bold;
+			margin: 0 0 16px 0;
+			color: $header-text-color;
+		}
+		p{
+			font-size: 20px;
+			margin-top: 16px;
+			margin-bottom: 48px;
+			line-height: 30px;
+			color: $header-p-color;
+
+		}
+		button {
+			padding: 24px 140px 24px 140px;
+			background-color: $button-color;
+			color: #ffff;
+			font-size: 18px;
+			border: none;
+			cursor: pointer;
+		}
+	}
+
+// header hero content left section
+	&__content-left {
+		width: 294px;
+		height: 148px;
+		background: rgba(255, 255, 255, 0.72);
+		backdrop-filter: blur(20px);
+		margin-right: 140px;
+		padding: 24px;
+		transform: translateY(365px);
+		line-height: 30px;
+		cursor: pointer;
+		color: $header-text-color;
+		h4 , span , p {
+			margin: 0;
+		}
+		h4{
+			font-size: 28px;
+			padding-bottom: 8px;
+			// font-family: $font-bold;
+			font-weight: bold;
+		}
+		p{
+			font-size: 16px;
+			padding-bottom: 8px;
+		}
+		span {
+			font-size: 20px;
+			font-weight: bold;
+		}
+	}
 }

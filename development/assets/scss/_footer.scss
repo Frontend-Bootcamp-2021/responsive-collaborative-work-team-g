@@ -1,11 +1,14 @@
 .footer {
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	max-width: 1440px;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	gap: 48px;
+	padding: 50px;
 	border-top: 1px solid #d8d8d8;
-	padding: 50px 100px;
-	margin: 0 auto;
+
+	@include mq(tablet) {
+		justify-content: center;
+	}
 
 	a {
 		color: inherit;

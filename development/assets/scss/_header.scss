@@ -1,17 +1,31 @@
+// TO FIX:
+//navigation display should be display none in smaller screens
+// header boxes width should be max-width and become smaller automatically in smaller screens
+
 .header {
 	width: 100%;
 	height: auto;
 	display: flex;
 	flex-direction: column;
+	background-color: $nav-bg;
 
+
+	&__container {
+	width: 1240px;
+	height: auto;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	}
 	// navigation section
 
 	&__nav {
 	width: 100%;
 	display: flex;
+	// flex-wrap: wrap;
 	flex-direction: row;
+	justify-content: space-between;
 	align-items: center;
-	background-color: $nav-bg;
 	padding: 40px 0 40px 0;
 	color: $header-text-color;
 	height: 121px;
@@ -20,7 +34,7 @@
 	//logo styles
 
 	&__logo {
-		margin-left: 100px;
+
 		font-size: 24px;
 		font-family: $font-bold;
 		margin-right: 41px;
@@ -35,6 +49,9 @@
 	&__links-wrapper{
 		display: flex;
 		flex-direction: row;
+		:last-child {
+			margin-right: 0;
+		}
 		a {
 			margin-right: 41px;
 			text-decoration: none;
@@ -50,7 +67,6 @@
 		width: 473px;
 		height: 45px;
 		background-color: #ffff;
-		margin-right: 143.4px;
 
 		input {
 			width: 100%;
@@ -74,15 +90,19 @@
 		justify-content: space-between;
 		align-items: center;
 		height: 40px;
+		:nth-child(1) {
+			margin-left: 0;
+		}
 	}
 	&__icon{
-		margin-right: 30px;
+		margin-left: 30px;
 	}
 
 // slider controller btns
 
+
 	&__slider-controller {
-		width: 100%;
+
 		padding: 40px 0 40px 0;
 		background-color: $nav-bg;
 		display: flex;
@@ -91,6 +111,7 @@
 		align-items: center;
 		transition: .3s;
 		height: 100px;
+
 
 		.radio-lable {
 			display: block;
@@ -143,8 +164,8 @@
 		}
 
 		.arrow {
-			margin-right: 100px;
-			margin-left: 415px;
+
+			margin-left: 400px;
 			span {
 			background: $slider-arrow-bg;
 			border-radius: 50%;
@@ -170,18 +191,18 @@
 
 // header hero content 
 	&__content {
+		width: 100%;
 		display: flex;
 		flex-direction: row;
-		justify-content: space-between;
-		background: url(../images/header-bg.jpg);
+		background: url(../images/header-bg.jpg) no-repeat center center;
+		background-size: cover;
 		height: 553px;
 	}
 
 // header hero content right section
 	&__content-right {
-		width: 494px;
+		max-width: 494px;
 		height: 553px;
-		margin-left: 100px;
 		background: rgba(255, 255, 255, 0.72);
 		backdrop-filter: blur(20px);
 		transform: translateY(-80px);
@@ -212,7 +233,7 @@
 
 // header hero content left 
 	&__content-left {
-		width: 294px;
+		max-width: 294px;
 		height: 148px;
 		background: rgba(255, 255, 255, 0.72);
 		backdrop-filter: blur(20px);
@@ -234,6 +255,12 @@
 		p{
 			font-size: 16px;
 			padding-bottom: 8px;
+		}
+		.price {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			max-width: 294px;
 		}
 		span {
 			font-size: 20px;

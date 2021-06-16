@@ -1,0 +1,77 @@
+
+.room {
+  display: flex;
+	flex-direction: row;
+	align-items: center;
+  justify-content: space-between;
+	
+	background-color: $beautiful-bg;
+
+  margin: 8px;
+  object-fit: cover; 
+	
+	&__text{
+
+		margin-left: 50px;
+
+	}
+
+  &__button{
+    	background-color: $button-color;
+      color:white;
+      width: 176px;
+      height: 48px;
+      border:0px;
+			
+  }
+  &__imgone{
+		background-image: url("/assets/images/room-img/room_one.webp"  );
+    // object-fit: scale-down;
+		display:flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    width: 404px;
+    height: 582px;
+    padding-bottom: 55px;
+    padding-left: 20px;
+		background-size: cover;
+  }
+  
+	
+   &__imgo{
+    	background: rgba(255, 255, 255, 0.72);
+      backdrop-filter: blur(3px);
+      display: flex;
+			justify-content:center;
+	    align-items: center;
+      flex-direction: column;
+  }
+	&__imgt{
+
+		margin-right: 50px;
+
+	}
+	
+	&__btn {
+		background: $button-color;
+		border: 0px;
+		outline: none;
+		width: 48px;
+		height: 48px;
+	}
+	&__rad {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		padding: 0px;
+
+	}
+	
+
+
+  
+  
+  
+  
+}
+

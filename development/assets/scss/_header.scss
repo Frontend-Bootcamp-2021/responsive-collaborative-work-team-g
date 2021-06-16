@@ -5,39 +5,40 @@
 .header {
 	width: 100%;
 	height: auto;
-	display: flex;
-	flex-direction: column;
 	background-color: $nav-bg;
 
-
 	&__container {
-	width: 1240px;
+	max-width: 1240px;
 	height: auto;
 	display: flex;
-	justify-content: space-between;
 	margin: 0 auto;
-	}
-	// navigation section
+	
 
+	}
+
+	// navigation section
 	&__nav {
 	width: 100%;
 	display: flex;
-	// flex-wrap: wrap;
+	justify-content: center;
 	flex-direction: row;
-	justify-content: space-between;
 	align-items: center;
 	padding: 40px 0 40px 0;
 	color: $header-text-color;
 	height: 121px;
+	@include mq("desktop" , max) {
+		justify-content: space-between;
+		padding: 0 10% 0 10%;
+	}
+	
+
 	}
 
 	//logo styles
-
 	&__logo {
 
 		font-size: 24px;
 		font-family: $font-bold;
-		margin-right: 41px;
 		a {
 			text-decoration: none;
 			color: inherit;
@@ -45,19 +46,27 @@
 	}
 
 	//navigation links 
-
 	&__links-wrapper{
 		display: flex;
 		flex-direction: row;
-		:last-child {
-			margin-right: 0;
-		}
 		a {
-			margin-right: 41px;
+			margin-right: 45px;
 			text-decoration: none;
 			color: inherit;
 			font-size: 16px;
 			}
+			:first-child {
+				margin-left: 45px;
+			}
+
+			@include mq("desktop" , max) {
+				a {
+					margin-right: 20px;
+				}
+			}
+			@include mq("tablet" , max) {
+				display: none;
+				}
 	}
 
 // navigation input searchbox
@@ -67,7 +76,7 @@
 		width: 473px;
 		height: 45px;
 		background-color: #ffff;
-
+		margin-right: 100px;
 		input {
 			width: 100%;
 			height: 100%;
@@ -78,7 +87,10 @@
 		}
 		img {
 			display: block;
-			padding: 15.333px;
+			padding: 15px;
+		}
+		@include mq("desktop" , max) {
+			display: none;
 		}
 	}
 
@@ -93,26 +105,33 @@
 		:nth-child(1) {
 			margin-left: 0;
 		}
+
+		@include mq("mobile" , max) {
+			display: none;
+			}
 	}
 	&__icon{
 		margin-left: 30px;
 	}
 
 // slider controller btns
-
-
 	&__slider-controller {
-
-		padding: 40px 0 40px 0;
-		background-color: $nav-bg;
+	
 		display: flex;
 		flex-direction: row;
 		justify-content: flex-end;
+		@include mq("desktop" , max) {
+		justify-content: center;
+		align-content: center;
+		}
 		align-items: center;
 		transition: .3s;
 		height: 100px;
-
-
+		padding: 40px 0 40px 0;
+		background-color: $nav-bg;
+		@include mq("desktop" , max) {
+			display: none;
+		}
 		.radio-lable {
 			display: block;
 			position: relative;
@@ -122,6 +141,7 @@
 			-moz-user-select: none;
 			-ms-user-select: none;
 			user-select: none;
+			
 			input {
 				position: absolute;
 				opacity: 0;
@@ -177,7 +197,9 @@
 			cursor: pointer;
 			font-size: 25px;
 			color: $button-color;
-		
+			@include mq("desktop" , max) {
+				display: none;
+				}
 			}
 			:nth-child(1) {
 				transform: rotate(180deg);
@@ -191,24 +213,48 @@
 
 // header hero content 
 	&__content {
-		width: 100%;
+		width: 100% !important;
 		display: flex;
+		justify-content: space-between;
 		flex-direction: row;
 		background: url(../images/header-bg.jpg) no-repeat center center;
 		background-size: cover;
-		height: 553px;
+		min-height: 553px;
+		
+		@include mq("desktop" , max) {
+			padding: 0 100px 0 100px;
+		}
+
+		@include mq("tablet" , max) {
+			flex-direction: column;
+			align-content: center;
+			justify-content: center;
+			height: auto;
+			padding: 0;
+			}
 	}
 
 // header hero content right section
-	&__content-right {
+	&__content-left{
+	
 		max-width: 494px;
-		height: 553px;
+		min-height: 553px;
 		background: rgba(255, 255, 255, 0.72);
 		backdrop-filter: blur(20px);
 		transform: translateY(-80px);
+		@include mq("desktop" , max) {
+		transform: translateY(0);
+		}
+		@include mq("tablet" , max) {
+			min-height: auto;
+			}
+
 		padding: 60px;
 		h1{
 			font-size: 56px;
+			@include mq("tablet" , max) {
+			font-size: 35px;
+				}
 			font-family: $font-bold;
 			margin: 0 0 16px 0;
 			color: $header-text-color;
@@ -228,17 +274,31 @@
 			font-size: 18px;
 			border: none;
 			cursor: pointer;
+			@include mq("tablet" , max) {
+				padding: 24px 60px 24px 60px;
+				}
+
 		}
+
+		@include mq("tablet" , max) {
+			margin: 10%;
+			max-width: 80%;
+			text-align: center;
+			background: rgba(255, 255, 255, 0.7);
+			}
 	}
 
 // header hero content left 
-	&__content-left {
+	&__content-right {
 		max-width: 294px;
 		height: 148px;
 		background: rgba(255, 255, 255, 0.72);
 		backdrop-filter: blur(20px);
-		margin-right: 140px;
 		padding: 24px;
+		margin-right: 140px;
+		@include mq("desktop" , max) {
+			margin-right: 0;
+			}
 		transform: translateY(365px);
 		line-height: 30px;
 		cursor: pointer;
@@ -249,7 +309,6 @@
 		h4{
 			font-size: 28px;
 			padding-bottom: 8px;
-			// font-family: $font-bold;
 			font-weight: bold;
 		}
 		p{
@@ -266,5 +325,15 @@
 			font-size: 20px;
 			font-weight: bold;
 		}
+
+		@include mq("tablet" , max) {
+				margin: 0 10% 10% 10%;
+				max-width: 80%;
+				text-align: center;
+				background: rgba(255, 255, 255, 0.7);
+				transform: translateY(0);
+				}
+			
+			}
 	}
-}
+

@@ -59,14 +59,70 @@
 		width: 48px;
 		height: 48px;
 	}
-	&__rad {
+
+	.rdt{
+
 		display: flex;
 		flex-direction: row;
-		align-items: center;
-		padding: 0px;
-
 	}
-	
+
+		.radio-lable {
+			display: block;
+			position: relative;
+			padding-left: 35px;
+			cursor: pointer;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+
+		input {
+			position: absolute;
+			opacity: 0;
+			cursor: pointer;
+			&:checked {
+			~ {
+			 .checkmark {
+			 border: 2px solid $button-color;
+			 &:after {
+				display: block;
+				background-color: $button-color;
+			 }
+			 }
+			}
+			}
+		 }
+
+		.checkmark {
+			&:after {
+			top: 50%;
+			left: 50%;
+			transform: translate(-50% , -50%);
+			width: 11px;
+			height: 11px;
+			border-radius: 50%;
+			background: $radio-bg;
+			}
+		}
+
+		.checkmark {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 27px;
+			width: 27px;
+			border-radius: 50%;
+			&:after {
+			 content: "";
+			 position: absolute;
+			}
+		}
+		 
+			
+
+
+
 
 
   

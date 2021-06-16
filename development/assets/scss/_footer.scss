@@ -1,8 +1,11 @@
 .footer {
-	padding: 50px 100px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	max-width: 1440px;
+	border-top: 1px solid #d8d8d8;
+	padding: 50px 100px;
+	margin: 0 auto;
 
 	a {
 		color: inherit;

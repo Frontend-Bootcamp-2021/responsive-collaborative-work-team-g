@@ -29,8 +29,6 @@
 		justify-content: space-between;
 		padding: 0 10% 0 10%;
 	}
-	
-
 	}
 
 	//logo styles
@@ -67,6 +65,20 @@
 				display: none;
 				}
 	}
+
+// menu icon in small screens 
+&__burger-menu {
+	display: none;
+	cursor: pointer;
+		img {
+			display: block;
+			width: 30px;
+			height: 30px;
+		}
+		@include mq("tablet" , max) {
+			display: block;
+			}
+}
 
 // navigation input searchbox
 	&__search-box {
@@ -280,8 +292,11 @@
 			border: none;
 			cursor: pointer;
 			@include mq("tablet" , max) {
-				padding: 24px 60px 24px 60px;
+				padding: 20px 60px 24px 60px;
 				}
+			@include mq("tablet" , max) {
+					padding: 20px 40px 24px 40px;
+					}
 
 		}
 

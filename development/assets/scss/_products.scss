@@ -1,42 +1,47 @@
-.product{
+.product {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	margin-top: 88px;
-	&__titl{
+
+	&__titl {
 		margin-bottom: 32px;
 		font-size: 40px;
 	}
-	&__content{
+
+	&__content {
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
 		flex-wrap: wrap;
 	}
-	&__content{
+
+	&__content {
 		gap: 32px;
 	}
-	&__image{
+
+	&__image {
 		height: 301px;
 		width: 285px;
 	}
 
-	&__name{
+	&__name {
 		display: flex;
 		flex-direction: column;
-		justify-content:left;
+		justify-content: left;
 		padding: 16px 30px;
 	}
-	&__discount-box{
+
+	&__discount-box {
 		display: flex;
 		flex-direction: row;
-		justify-content:flex-end;
+		justify-content: flex-end;
 		margin-right: 24px;
 		opacity: 1;
-
 	}
-	&__discount{
-		position:absolute;
+
+	&__discount {
+		position: absolute;
 		width: 48px;
 		height: 48px;
 		border-radius: 50%;
@@ -45,39 +50,50 @@
 		align-items: center;
 		justify-content: center;
 	}
-	&__discount--active{
+
+	&__discount--active {
 		background: #E97171;
 		color: #FFFFFF;
 	}
-	&__discount--new{
+
+	&__discount--new {
 		background: #2EC1AC;
 		color: #FFFFFF;
 	}
-	&__summary{
-		color:#898989;
+
+	&__summary {
+		color: #898989;
 		font-weight: 500;
 	}
-	&__title,&__price--discount{
+
+	&__title,
+	&__price--discount {
 		font-weight: 600;
 	}
-	&__price--nodiscount{
+
+	&__price--nodiscount {
 		color: #B0B0B0;
 		font-weight: 400;
 	}
-	&__title, &__summary,&__price--discount{
+
+	&__title,
+	&__summary,
+	&__price--discount {
 		margin: 0;
 		line-height: 28px;
 	}
-	&__description{
-	background: #F4F5F7;
-	}
-	&__price-box{
-		display: flex;
-		flex-direction: row;
-		justify-content:space-between;
+
+	&__description {
+		background: #F4F5F7;
 	}
 
-	&__hover-box{
+	&__price-box {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	&__hover-box {
 		width: 285px;
 		height: 421px;
 		display: flex;
@@ -87,10 +103,10 @@
 		position: absolute;
 		opacity: 0;
 		background: #3A3A3A;
-		
-		transition: all .5s ease-in-out;
+		transition: all .2s ease-in-out;
 	}
-	&__add-btn{
+
+	&__add-btn {
 		width: 202px;
 		height: 48px;
 		background: #ffffff;
@@ -98,11 +114,13 @@
 		font-weight: 600;
 		outline: none;
 		border: none;
-		&:hover{
+
+		&:hover {
 			cursor: pointer;
 		}
 	}
-	&__share-card{
+
+	&__share-card {
 		height: 96px;
 		width: 202px;
 		display: flex;
@@ -110,36 +128,42 @@
 		justify-content: space-between;
 		align-items: center;
 	}
-	&__share-box{
+
+	&__share-box {
 		width: 184px;
 		height: 24px;
 		display: flex;
 		flex-direction: row;
-		justify-content:space-between;
+		justify-content: space-between;
 		align-items: center;
 		padding-left: 10px;
 		padding-right: 30px;
 	}
-	&__share-link{
+
+	&__share-link {
 		text-decoration: none;
 		color: #ffffff;
 	}
-	&__share-text{
+
+	&__share-text {
 		position: absolute;
 		margin-left: 10px;
 	}
-	&__card:hover{
-		.product{
-			&__hover-box{
-			opacity: 1;
-			background: rgba(58, 58, 58, 0.72);
+
+	&__card:hover {
+		.product {
+			&__hover-box {
+				opacity: 1;
+				background: rgba(58, 58, 58, 0.72);
 			}
-			&__discount-box{
+
+			&__discount-box {
 				opacity: 0;
 			}
 		}
 	}
-	.product-more{
+
+	.product-more {
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
@@ -149,12 +173,12 @@
 		height: 48px;
 		background: #FFFFFF;
 		border: 1px solid #E89F71;
-		&__btn{
+
+		&__btn {
 			text-decoration: none;
 			font-weight: 600;
-			font-size: 16px;	
+			font-size: 16px;
 			color: #E89F71;
 		}
-	}	
-
+	}
 }

@@ -1,45 +1,85 @@
-.furniture {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 64px 0;
+/* Class for hiding elements on mobile */
+.hide {
+	display: none;
 
-	&__gallery {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		max-width: 1440px;
+	@include mq(desktop) {
+		display: initial;
 	}
+}
 
+.furniture {
 	&__headline {
 		text-align: center;
 
+		h2,
 		h3 {
-			font-size: 20px;
-			line-height: 30px;
 			margin: 0;
+			padding: 0;
 		}
 
 		h2 {
 			font-family: $font-bold;
-			font-size: 40px;
-			line-height: 48px;
-			margin: 0;
 		}
 	}
 
-	&__img {
-		margin: 8px;
-		object-fit: cover;
-	}
-
-	&__top {
+	&__gallery {
+		/* on mobile, 3 column */
 		display: flex;
-		align-items: flex-end;
+		flex-direction: column;
+
+		@include mq(desktop) {
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+		}
 	}
 
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		margin: 8px;
+	}
+
+	&__top,
 	&__bottom {
 		display: flex;
-		align-items: flex-start;
+		flex-direction: column;
+		align-items: center;
+
+		@include mq(tablet) {
+			flex-direction: row;
+			align-items: center;
+		}
+
+		@include mq(desktop) {
+			flex-direction: row;
+			min-width: max-content
+		}
+	}
+
+	/* TABLET */
+
+	@include mq(tablet) {
+		padding: 64px 0;
+
+		&__column {
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	/* DESKTOP 🖥️ */
+
+	@include mq(desktop) {
+		&__top {
+			align-items: flex-end;
+		}
+
+		&__bottom {
+			align-items: flex-start;
+		}
 	}
 }

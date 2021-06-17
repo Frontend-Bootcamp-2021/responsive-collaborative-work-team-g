@@ -9,7 +9,10 @@
 
 .furniture {
 	&__title{
-		font-size: 40px;
+		font-size: 35px;
+		@include mq(mobile){
+			font-size: 40px;
+		}
 	}
 	&__headline {
 		text-align: center;

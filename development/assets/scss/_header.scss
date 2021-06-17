@@ -337,8 +337,9 @@
 		}
 
 		@include mq("tablet", max) {
-			margin: 10%;
+			margin: 30px;
 			max-width: 80%;
+			padding:30px;
 			text-align: center;
 			background: rgba(255, 255, 255, 0.7);
 		}

@@ -11,9 +11,12 @@
 
 	&__title {
 		text-align: center;
-		font-size: 40px;
+		font-size: 35px;
 		margin-bottom: 32px;
 		color: $header-text-color;
+		@include mq(mobile){
+			font-size: 40px;
+		}
 	}
 
 	&__box-holder {

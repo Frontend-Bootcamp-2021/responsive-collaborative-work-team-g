@@ -1,10 +1,9 @@
 .home {
 
-	// NOTES: set CSS variables on assets/scss/globals/_variables.scss
-	// background-color: var(--home-color);
+	// // NOTES: set CSS variables on assets/scss/globals/_variables.scss
+	// // background-color: var(--home-color);
 
-  @include mq(tablet, min) {
-    background-color: #800080;
-  }
+	@include mq(tablet, min) {
+		background-color: #800080;
+	}
 }
-

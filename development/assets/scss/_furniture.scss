@@ -6,17 +6,21 @@
 		display: initial;
 	}
 }
-.cntr{
+
+.cntr {
 	width: 60%;
 	height: 60%;
 }
+
 .furniture {
-	&__title{
+	&__title {
 		font-size: 35px;
-		@include mq(mobile){
+
+		@include mq(mobile) {
 			font-size: 40px;
 		}
 	}
+
 	&__headline {
 		text-align: center;
 
@@ -48,7 +52,8 @@
 		height: 100%;
 		object-fit: cover;
 		margin: 8px;
-		@include mq(mobile){
+
+		@include mq(mobile) {
 			width: 80%;
 			height: 80%;
 		}
@@ -58,6 +63,7 @@
 	&__bottom {
 		display: flex;
 		flex-direction: column;
+		justify-content: center;
 		align-items: center;
 
 		@include mq(tablet) {
@@ -97,10 +103,9 @@
 	}
 }
 
-.cntr{
-	@include mq(tablet){
+.cntr {
+	@include mq(tablet) {
 		max-width: 290px;
-	
+
 	}
 }
-

@@ -62,4 +62,16 @@
 				padding: 0 16px 16px 16px;
 			}
 	}
+	@include mq("tablet" , max) {
+		&__box-holder {
+			flex-direction: column;
+			width: 80%;
+			margin-left: 10%;
+		}
+		&__box {
+			width: 100%;
+			margin-right: 0;
+			margin-bottom: 20px;
+		}
+	}
 }

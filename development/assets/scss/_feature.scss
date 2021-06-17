@@ -1,4 +1,4 @@
-@include mq(desktop){
+
 	.feature{
 		display: flex;
 		flex-direction:row;
@@ -50,7 +50,7 @@
 		height: 38px;
 		}
 	}
-}
+
 
 @include mq(tablet){
 	.feature{

@@ -10,27 +10,28 @@
 	margin-bottom: 88px;
 
 	&__container {
-	max-width: 1240px;
-	height: auto;
-	display: flex;
-	margin: 0 auto;
-	
+		max-width: 1240px;
+		height: auto;
+		display: flex;
+		margin: 0 auto;
+
 	}
 
 	// navigation section
 	&__nav {
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	flex-direction: row;
-	align-items: center;
-	padding: 40px 0 40px 0;
-	color: $header-text-color;
-	height: 121px;
-	@include mq("desktop" , max) {
-		justify-content: space-between;
-		padding: 0 10% 0 10%;
-	}
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		flex-direction: row;
+		align-items: center;
+		padding: 40px 0 40px 0;
+		color: $header-text-color;
+		height: 121px;
+
+		@include mq("desktop", max) {
+			justify-content: space-between;
+			padding: 0 10% 0 10%;
+		}
 	}
 
 	//logo styles
@@ -38,6 +39,7 @@
 
 		font-size: 24px;
 		font-family: $font-bold;
+
 		a {
 			text-decoration: none;
 			color: inherit;
@@ -45,44 +47,49 @@
 	}
 
 	//navigation links 
-	&__links-wrapper{
+	&__links-wrapper {
 		display: flex;
 		flex-direction: row;
+
 		a {
 			margin-right: 45px;
 			text-decoration: none;
 			color: inherit;
 			font-size: 16px;
-			}
-			:first-child {
-				margin-left: 45px;
-			}
+		}
 
-			@include mq("desktop" , max) {
-				a {
-					margin-right: 20px;
-				}
+		:first-child {
+			margin-left: 45px;
+		}
+
+		@include mq("desktop", max) {
+			a {
+				margin-right: 20px;
 			}
-			@include mq("tablet" , max) {
-				display: none;
-				}
+		}
+
+		@include mq("tablet", max) {
+			display: none;
+		}
 	}
 
-// menu icon in small screens 
-&__burger-menu {
-	display: none;
-	cursor: pointer;
+	// menu icon in small screens 
+	&__burger-menu {
+		display: none;
+		cursor: pointer;
+
 		img {
 			display: block;
 			width: 30px;
 			height: 30px;
 		}
-		@include mq("tablet" , max) {
-			display: block;
-			}
-}
 
-// navigation input searchbox
+		@include mq("tablet", max) {
+			display: block;
+		}
+	}
+
+	// navigation input searchbox
 	&__search-box {
 		display: flex;
 		flex-direction: row;
@@ -90,6 +97,7 @@
 		height: 45px;
 		background-color: #ffff;
 		margin-right: 120px;
+
 		input {
 			width: 100%;
 			height: 100%;
@@ -98,16 +106,18 @@
 			font-size: 14px;
 			font-family: $font-light;
 		}
+
 		img {
 			display: block;
 			padding: 15px;
 		}
-		@include mq("desktop" , max) {
+
+		@include mq("desktop", max) {
 			display: none;
 		}
 	}
 
-// navigation user icons
+	// navigation user icons
 
 	&__icons-box {
 		display: flex;
@@ -115,36 +125,42 @@
 		justify-content: space-between;
 		align-items: center;
 		height: 40px;
+
 		:nth-child(1) {
 			margin-left: 0;
 		}
 
-		@include mq("mobile" , max) {
+		@include mq("mobile", max) {
 			display: none;
-			}
+		}
 	}
-	&__icon{
+
+	&__icon {
 		margin-left: 30px;
 	}
 
-// slider controller btns
+	// slider controller btns
 	&__slider-controller {
-	
+
 		display: flex;
 		flex-direction: row;
 		justify-content: flex-end;
-		@include mq("desktop" , max) {
-		justify-content: center;
-		align-content: center;
+
+		@include mq("desktop", max) {
+			justify-content: center;
+			align-content: center;
 		}
+
 		align-items: center;
 		transition: .3s;
 		height: 100px;
 		padding: 40px 0 40px 0;
 		background-color: $nav-bg;
-		@include mq("desktop" , max) {
+
+		@include mq("desktop", max) {
 			display: none;
 		}
+
 		.radio-lable {
 			display: block;
 			position: relative;
@@ -154,15 +170,17 @@
 			-moz-user-select: none;
 			-ms-user-select: none;
 			user-select: none;
-			
+
 			input {
 				position: absolute;
 				opacity: 0;
 				cursor: pointer;
+
 				&:checked {
 					~ {
 						.checkmark {
 							border: 2px solid $button-color;
+
 							&:after {
 								display: block;
 								background-color: $button-color;
@@ -171,11 +189,12 @@
 					}
 				}
 			}
+
 			.checkmark {
 				&:after {
 					top: 50%;
 					left: 50%;
-					transform: translate(-50% , -50%);
+					transform: translate(-50%, -50%);
 					width: 11px;
 					height: 11px;
 					border-radius: 50%;
@@ -183,6 +202,7 @@
 				}
 			}
 		}
+
 		.checkmark {
 			position: absolute;
 			top: 0;
@@ -190,6 +210,7 @@
 			height: 27px;
 			width: 27px;
 			border-radius: 50%;
+
 			&:after {
 				content: "";
 				position: absolute;
@@ -199,86 +220,96 @@
 		.arrow {
 
 			margin-left: 400px;
+
 			span {
-			background: $slider-arrow-bg;
-			border-radius: 50%;
-			display: inline-flex;
-			justify-content: center;
-			align-items: center;
-			width: 48px;
-			height: 48px;
-			cursor: pointer;
-			font-size: 30px;
-			color: $button-color;
-			@include mq("desktop" , max) {
-				display: none;
+				background: $slider-arrow-bg;
+				border-radius: 50%;
+				display: inline-flex;
+				justify-content: center;
+				align-items: center;
+				width: 48px;
+				height: 48px;
+				cursor: pointer;
+				font-size: 30px;
+				color: $button-color;
+
+				@include mq("desktop", max) {
+					display: none;
 				}
 			}
+
 			:nth-child(1) {
 				transform: rotate(180deg);
 			}
-		}	
+		}
+
 		span:hover {
 			background: $button-color;
 			color: #ffff;
 		}
 	}
 
-// header hero content 
+	// header hero content 
 
-&__content-wrapper {
-	width: 100%;
-	background: url(../images/header-img/header-bg.jpg) no-repeat center center;
-	background-size: cover;
-}
+	&__content-wrapper {
+		width: 100%;
+		background: url(../images/header-img/header-bg.jpg) no-repeat center center;
+		background-size: cover;
+	}
 
 	&__content {
 		display: flex;
 		justify-content: space-between;
 		flex-direction: row;
 		min-height: 553px;
-		
-		@include mq("desktop" , max) {
+
+		@include mq("desktop", max) {
 			padding: 0 100px 0 100px;
 		}
 
-		@include mq("tablet" , max) {
+		@include mq("tablet", max) {
 			flex-direction: column;
 			align-content: center;
 			justify-content: center;
 			height: auto;
 			padding: 0;
-			}
+		}
 	}
 
-// header hero content right section
-	&__content-left{
-	
+	// header hero content right section
+	&__content-left {
+
 		max-width: 494px;
 		min-height: 553px;
 		background: rgba(255, 255, 255, 0.72);
 		backdrop-filter: blur(20px);
 		transform: translateY(-80px);
-		@include mq("desktop" , max) {
-		transform: translateY(0);
-		margin-right: 50px;
+
+		@include mq("desktop", max) {
+			transform: translateY(0);
+			margin-right: 50px;
 		}
-		@include mq("tablet" , max) {
+
+		@include mq("tablet", max) {
 			min-height: auto;
 			word-wrap: break-word;
-			}
+		}
 
 		padding: 60px;
-		h1{
+
+		h1 {
 			font-size: 56px;
-			@include mq("tablet" , max) {
-			font-size: 35px;
-				}
+
+			@include mq("tablet", max) {
+				font-size: 35px;
+			}
+
 			font-family: $font-bold;
 			margin: 0 0 16px 0;
 			color: $header-text-color;
 		}
-		p{
+
+		p {
 			font-size: 20px;
 			margin-top: 16px;
 			margin-bottom: 48px;
@@ -286,6 +317,7 @@
 			color: $header-p-color;
 
 		}
+
 		button {
 			padding: 24px 140px 24px 140px;
 			background-color: $button-color;
@@ -293,24 +325,26 @@
 			font-size: 18px;
 			border: none;
 			cursor: pointer;
-			@include mq("tablet" , max) {
+
+			@include mq("tablet", max) {
 				padding: 20px 60px 24px 60px;
-				}
-			@include mq("tablet" , max) {
-					padding: 20px 40px 24px 40px;
-					}
+			}
+
+			@include mq("tablet", max) {
+				padding: 20px 40px 24px 40px;
+			}
 
 		}
 
-		@include mq("tablet" , max) {
+		@include mq("tablet", max) {
 			margin: 10%;
 			max-width: 80%;
 			text-align: center;
 			background: rgba(255, 255, 255, 0.7);
-			}
+		}
 	}
 
-// header hero content left 
+	// header hero content left 
 	&__content-right {
 		max-width: 294px;
 		height: 148px;
@@ -318,53 +352,64 @@
 		backdrop-filter: blur(20px);
 		padding: 24px;
 		margin-right: 40px;
-		@include mq("desktop" , max) {
+
+		@include mq("desktop", max) {
 			margin-right: 0;
-			}
+		}
+
 		transform: translateY(365px);
 		line-height: 30px;
 		cursor: pointer;
 		color: $header-text-color;
-		h4 , span , p {
+
+		h4,
+		span,
+		p {
 			margin: 0;
 		}
-		h4{
+
+		h4 {
 			font-size: 28px;
 			padding-bottom: 8px;
 			font-weight: bold;
 		}
-		p{
+
+		p {
 			font-size: 16px;
 			padding-bottom: 8px;
 		}
+
 		.price {
 			display: flex;
 			flex-direction: row;
 			justify-content: center;
+
 			:first-child {
 				padding-right: 15px;
 			}
 		}
+
 		span {
 			font-size: 20px;
 			font-weight: bold;
 		}
-		@include mq("desktop" , max) {
-			height: fit-content;
-			
-			}
 
-		@include mq("tablet" , max) {
-			
-				margin: 0 10% 10% 10%;
-				max-width: 80%;
-				text-align: center;
-				background: rgba(255, 255, 255, 0.7);
-				transform: translateY(0);
-				.price {
-					font-size: 12px;
-				}
-				}
-			
+		@include mq("desktop", max) {
+			height: fit-content;
+
+		}
+
+		@include mq("tablet", max) {
+
+			margin: 0 10% 10% 10%;
+			max-width: 80%;
+			text-align: center;
+			background: rgba(255, 255, 255, 0.7);
+			transform: translateY(0);
+
+			.price {
+				font-size: 12px;
 			}
+		}
 	}
+}

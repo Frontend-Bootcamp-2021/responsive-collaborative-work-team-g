@@ -8,6 +8,7 @@
 }
 
 .furniture {
+	
 	&__title {
 		font-size: 35px;
 
@@ -108,4 +109,5 @@
 			width: auto;
 		}
 	}
+	overflow-x: hidden;
 }

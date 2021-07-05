@@ -15,5 +15,10 @@
 		"todohighlight.keywords": [
 			"NOTES:"
 		]
+	},
+	"extensions": {
+		"recommendations": [
+			"ronnidc.nunjucks"
+		]
 	}
 }
